@@ -28,9 +28,8 @@ cameraTrigger.onclick = function() {
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
 
-// Draw a rectangle on the camera
+// Draw a  rectangle on the camera
 var canvas = document.getElementById("camera--sensor");
-var ctx = canvas.getContext("2d");
+var ctx = canvas.getContext('2d');
 
-ctx.fillStyle = "rgb(0, 0, 255)";
-ctx.fillRect(50, 40, 30, 30);
+ctx.strokeRect(50,50, 100, 100);
