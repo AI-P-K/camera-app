@@ -1,29 +1,22 @@
 <!doctype html>
-<html lang=”en”>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Name of your awesome camera app -->
-    <title>Camera App</title>
-    <!-- Link to your main style sheet-->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile-Camera-App</title>
 </head>
 <body>
-    <!-- Camera -->
-    <main id="camera">
-        <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline></video>
-        <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
+    <h1>Mobile Canvas with Shape</h1>
 
-        <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
 
-        <!-- Camera trigger -->
-        <button id="camera--trigger">Take a picture</button>
-    </main>
-    <!-- Reference to your JavaScript file -->
-    <script src="app.js"></script>
+    <canvas id="canvas" width="375px" height="667px">
+    </canvas>
+    <video id="camera--view" autoplay playsinline></video>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
