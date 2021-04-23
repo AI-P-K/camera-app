@@ -1,35 +1,30 @@
-// Set constraints for the video stream
-var constraints = { video: { facingMode: {exact:'environment'} }, audio: false };
-// Define constants
-const cameraView = document.querySelector("#camera--view"),
-    cameraOutput = document.querySelector("#camera--output"),
-    cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger")
-// Access the device camera and stream to cameraView
+const canvas = document.querySelector('#canvas');
+const cameraView = document.querySelector('#camera--view');
+const ctx = canvas.getContext('2d');
+const constraints = { video: { facingMode: "user" }, audio: false };
+
+
+ctx.beginPath();
+ctx.lineWidth = 5;
+ctx.strokeStyle = 'green';
+ctx.moveTo(72,193);
+ctx.lineTo(256, 195);
+ctx.lineTo(255, 517);
+ctx.lineTo(86,541);
+ctx.closePath();
+ctx.stroke();
+
+
 function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
-        .then(function(stream) {
+        .then(function (stream) {
             track = stream.getTracks()[0];
             cameraView.srcObject = stream;
         })
-        .catch(function(error) {
-            console.error("Oops. Something is broken.", error);
+        .catch(function (error) {
+            console.error("Oops. Caca program", error);
         });
 }
-// Take a picture when cameraTrigger is tapped
-cameraTrigger.onclick = function() {
-    cameraSensor.width = cameraView.videoWidth;
-    cameraSensor.height = cameraView.videoHeight;
-    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
-    cameraOutput.classList.add("taken");
-};
-// Start the video stream when the window loads
+
 window.addEventListener("load", cameraStart, false);
-
-// Draw a  rectangle on the camera
-var canvas = document.getElementById("camera--sensor");
-var ctx = canvas.getContext('2d');
-
-ctx.strokeRect(50,50, 100, 100);
