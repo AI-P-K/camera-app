@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvas');
 const cameraView = document.querySelector('#camera--view');
 const ctx = canvas.getContext('2d');
-const constraints = { video: { facingMode: "environment" }, audio: false };
+const constraints = { video: { facingMode:{ exact: "environment" }}, audio: false };
 
 
 ctx.beginPath();
