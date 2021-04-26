@@ -4,15 +4,15 @@ const cameraOutput = document.querySelector("#camera--output");
 const cameraTrigger = document.querySelector("#camera--trigger");
 
 const ctx = cameraSensor.getContext('2d');
-const constraints = { video: { facingMode: "user" }, audio: false };
+const constraints = { video: { facingMode: {exact:"environment"} }, audio: false };
 
 ctx.beginPath();
 ctx.lineWidth = 5;
 ctx.strokeStyle = 'green';
-ctx.moveTo(72,193);
-ctx.lineTo(256, 195);
-ctx.lineTo(255, 517);
-ctx.lineTo(86,541);
+ctx.moveTo(52,53);
+ctx.lineTo(335, 100);
+ctx.lineTo(327, 498);
+ctx.lineTo(52,536);
 ctx.closePath();
 ctx.stroke();
 
