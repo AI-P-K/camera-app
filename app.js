@@ -41,9 +41,8 @@ function calculateCoordinates(screenHeight, screenWidth) {
     ctx.lineTo(x4,y4);
     ctx.closePath();
     ctx.stroke();
-
 }
-
+calculateCoordinates(screen.width, screen.height)
 // Access the device camera and stream to cameraView
 function cameraStart() {
     navigator.mediaDevices
