@@ -14,11 +14,11 @@ function calculateCoordinates(screenHeight, screenWidth) {
     var aspectRatio = 250/432
 
     // Lets start at 10% from the edges P1 and P2 define the first line, parallel to the longest edge of the screen (camera)
-    var x1 = screenHeight * 0.2;
-    var y1 = screenWidth * 0.2;
+    var x1 = screenHeight * 0.3;
+    var y1 = screenWidth * 0.3;
 
-    var x2 = screenHeight * 0.2;
-    var y2 = screenWidth * 0.8;
+    var x2 = screenHeight * 0.3;
+    var y2 = screenWidth * 0.7;
 
     var realP1P2length = y2-y1;
     var realP3P4length = realP1P2length / ratio1;
@@ -43,6 +43,7 @@ function calculateCoordinates(screenHeight, screenWidth) {
     ctx.stroke();
 }
 calculateCoordinates(screen.width, screen.height)
+
 // Access the device camera and stream to cameraView
 function cameraStart() {
     navigator.mediaDevices
