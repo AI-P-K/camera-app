@@ -9,10 +9,10 @@ const constraints = { video: { facingMode: {exact:"environment"} }, audio: false
 ctx.beginPath();
 ctx.lineWidth = 5;
 ctx.strokeStyle = 'green';
-ctx.moveTo(52,53);
-ctx.lineTo(335, 100);
-ctx.lineTo(327, 498);
-ctx.lineTo(52,536);
+ctx.moveTo(67.9,37.5);
+ctx.lineTo(67.9, 337);
+ctx.lineTo(241, 311);
+ctx.lineTo(241,63);
 ctx.closePath();
 ctx.stroke();
 
